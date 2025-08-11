@@ -18,7 +18,7 @@ jobs:
           flutter-version: '3.32.8'
           channel: 'stable'
       - run: flutter pub get
-      - run: flutter build web --release
+      - run: flutter build web --release --base-href "/book_store_web/"
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
