@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "7fb30f70f8ebeb916f827b8d59eae777",
+const RESOURCES = {"flutter_bootstrap.js": "ce1a5bca579afb1ccd7a036dcc61d4ba",
 "flutter.js": "83d881c1dbb6d6bcd6b42e274605b69c",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
@@ -22,8 +22,8 @@ const RESOURCES = {"flutter_bootstrap.js": "7fb30f70f8ebeb916f827b8d59eae777",
 "canvaskit/canvaskit.wasm": "7a3f4ae7d65fc1de6a6e7ddd3224bc93",
 "canvaskit/canvaskit.js.symbols": "bdcd3835edf8586b6d6edfce8749fb77",
 "main.dart.js": "97e1aa38ef26a369c834e7bf45b6ffaa",
-"index.html": "39dcbdcb74ed005b4a406c17b7ba8b03",
-"/": "39dcbdcb74ed005b4a406c17b7ba8b03",
+"index.html": "eb49b90e058e36a37284a18120d88296",
+"/": "eb49b90e058e36a37284a18120d88296",
 "assets/packages/clevertap_plugin/assets/clevertap.js": "9a609413fe1dcb0aef4f456da4dfab23",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "33b7d9392238c04c131b6ce224e13711",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
