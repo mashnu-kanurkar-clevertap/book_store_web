@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
 
 
   void onUserLogin(String userEmail) {
-    var stuff = ["bags", "shoes"];
+    var stuff = ["bags", "shoes", "Perfumes"];
     var profile = {
       'Name': 'Captain_$userEmail',
       'Identity': generateHash(userEmail),
