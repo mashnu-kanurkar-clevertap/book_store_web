@@ -62,7 +62,7 @@ class _DashboardPageState extends State<DashboardPage> {
               ],
             ),
             onPressed: (){
-              logoutUser();
+              // logoutUser();
               Navigator.push(context, MaterialPageRoute(builder: (_) => const LoginPage()));
             } 
           ),

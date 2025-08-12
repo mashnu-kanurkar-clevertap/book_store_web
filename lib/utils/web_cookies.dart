@@ -1,4 +1,4 @@
-import 'dart:js_interop';
+// import 'dart:js_interop';
 
-@JS('clearCookies')
-external void clearCookiesJS();
+// @JS('clearCookies')
+// external void clearCookiesJS();
