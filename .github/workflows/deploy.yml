@@ -3,24 +3,41 @@ on:
   push:
     branches:
       - main
-      
-permissions:
-  contents: write
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
+      - uses: actions/checkout@v4
+
+      # Install Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.32.8'
-          channel: 'stable'
-      - run: flutter pub get
-      - run: flutter build web --release --base-href "/book_store_web/"
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+          channel: stable
+
+      - name: Get packages
+        run: flutter pub get
+
+      # Build web — set base-href for repo pages (see note below)
+      - name: Build web (release)
+        run: flutter build web --release --base-href "/REPO_NAME/"
+
+      # Package & upload pages artifact (official GitHub Pages flow)
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web
+          path: build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
