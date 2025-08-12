@@ -27,7 +27,7 @@ jobs:
 
       # Build web — set base-href for repo pages (see note below)
       - name: Build web (release)
-        run: flutter build web --release --base-href "/REPO_NAME/"
+        run: flutter build web --release --base-href "/book_store_web/"
 
       # Package & upload pages artifact (official GitHub Pages flow)
       - name: Upload Pages artifact
